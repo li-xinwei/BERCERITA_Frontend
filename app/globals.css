@@ -1,55 +1,64 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #4b4b4b;
-  --bercerita-green: #58cc02;
-  --bercerita-blue: #1cb0f6;
-  --bercerita-orange: #ff9600;
-  --bercerita-red: #ff4b4b;
-  --bercerita-purple: #ce82ff;
-  --bercerita-yellow: #ffc800;
-  --bercerita-grey: #afafaf;
-  --bercerita-dark-grey: #3c3c3c;
+  /* Duolingo Colors */
+  --primary: 145 42 131; /* Purple */
+  --primary-foreground: 255 255 255;
+  --secondary: 88 204 2; /* Green */
+  --secondary-foreground: 255 255 255;
+  --accent: 255 200 0; /* Yellow */
+  --accent-foreground: 0 0 0;
+  --background: 255 255 255;
+  --foreground: 28 28 28;
+  --muted: 241 241 241;
+  --muted-foreground: 115 115 115;
+  --card: 255 255 255;
+  --card-foreground: 28 28 28;
+  --border: 229 229 229;
+  --input: 229 229 229;
+  --ring: 145 42 131;
+  --radius: 1rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-primary: var(--font-nunito);
-  --font-secondary: var(--font-poppins);
+.dark {
+  --background: 28 28 28;
+  --foreground: 255 255 255;
+  --muted: 38 38 38;
+  --muted-foreground: 150 150 150;
+  --card: 38 38 38;
+  --card-foreground: 255 255 255;
+  --border: 48 48 48;
+  --input: 48 48 48;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #141414;
-    --foreground: #f7f7f7;
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-primary);
+/* Duolingo-style components */
+.btn-primary {
+  @apply bg-primary text-white font-bold py-4 px-6 rounded-2xl hover:opacity-90 transition-opacity;
 }
 
-h1, h2, h3, h4, h5, h6, button {
-  font-family: var(--font-secondary);
+.btn-secondary {
+  @apply bg-secondary text-white font-bold py-4 px-6 rounded-2xl hover:opacity-90 transition-opacity;
 }
 
-/* Duolingo-style button animations */
-button {
-  transition: all 0.2s ease;
-  transform: translateY(0);
-  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+.card-hover {
+  @apply transition-transform hover:scale-105 hover:shadow-lg;
 }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.1);
+.lesson-card {
+  @apply rounded-3xl border-2 overflow-hidden hover:border-primary transition-colors;
 }
 
-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+.progress-bar {
+  @apply h-3 rounded-full bg-secondary;
 }

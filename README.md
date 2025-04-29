@@ -1,6 +1,6 @@
 # BERCERITA - English Learning Platform for Indonesian Students
 
-![Bercerita Logo](/public/assets/bercerita-logo.svg)
+![Bercerita Logo](/bercerita_logo.jpeg)
 
 BERCERITA is a Duolingo-inspired English learning platform specifically designed for Indonesian students. The name "Bercerita" means "storytelling" in Indonesian, reflecting the platform's approach to teaching English through engaging stories and interactive activities.
 
@@ -59,7 +59,7 @@ BERCERITA_Frontend/
 │   ├── layout.tsx      # Root layout component
 │   └── page.tsx        # Home page
 ├── public/             # Static assets
-│   └── assets/         # Images and SVGs
+│   └── bercerita_logo.jpeg  # Logo image
 └── ...config files
 ```
 
