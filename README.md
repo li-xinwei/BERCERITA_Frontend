@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BERCERITA - English Learning Platform for Indonesian Students
+
+![Bercerita Logo](/public/assets/bercerita-logo.svg)
+
+BERCERITA is a Duolingo-inspired English learning platform specifically designed for Indonesian students. The name "Bercerita" means "storytelling" in Indonesian, reflecting the platform's approach to teaching English through engaging stories and interactive activities.
+
+## Features
+
+- **Interactive Learning**: Learn English through fun, game-like activities
+- **Daily Challenges**: Build language learning habits with daily streaks and challenges
+- **Learning Path**: Progressive learning journey from basics to advanced English
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+
+## Technology Stack
+
+- **Frontend**: Next.js 15 with React 19
+- **Styling**: TailwindCSS 4
+- **Language**: TypeScript
+- **Build Tool**: Turbopack
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.x or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/BERCERITA_Frontend.git
+cd BERCERITA_Frontend
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open your browser and navigate to http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+BERCERITA_Frontend/
+├── app/                # Next.js app directory
+│   ├── components/     # Reusable UI components
+│   ├── globals.css     # Global styles
+│   ├── layout.tsx      # Root layout component
+│   └── page.tsx        # Home page
+├── public/             # Static assets
+│   └── assets/         # Images and SVGs
+└── ...config files
+```
 
-## Learn More
+## Design Philosophy
 
-To learn more about Next.js, take a look at the following resources:
+BERCERITA's design is inspired by Duolingo's effective learning approach, but tailored specifically for Indonesian students learning English. The UI features:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Bright, engaging colors similar to Duolingo's palette
+- Gamified elements to keep users motivated
+- Clear learning progression paths
+- English language interface with consideration for Indonesian learners
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+This project is proprietary and not licensed for public use.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Acknowledgements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Duolingo for inspiration on effective language learning platforms
+- The Indonesian educational community for feedback and insights
