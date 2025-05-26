@@ -306,34 +306,33 @@ export default function LessonPage() {
               </div>
               
               <div className="space-y-3">
-              {currentLesson.options?.map((option, index) => (
-  <button
-    key={index}
-    className={`w-full p-4 rounded-lg border text-left transition-colors ${
-      selectedOption === option
-        ? isSubmitted
-          ? isCorrect
-            ? 'bg-green-50 dark:bg-green-900/20 border-green-300 dark:border-green-800'
-            : 'bg-red-50 dark:bg-red-900/20 border-red-300 dark:border-red-800'
-          : 'bg-blue-50 dark:bg-blue-900/20 border-blue-300 dark:border-blue-800'
-        : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700'
-    }`}
-    onClick={() => handleOptionSelect(option)}
-    disabled={isSubmitted}
-  >
-    {option}
-    {isSubmitted && selectedOption === option && (
-      <span className="float-right">
-        {isCorrect ? (
-          <CheckCircle className="h-5 w-5 text-green-500" />
-        ) : (
-          <X className="h-5 w-5 text-red-500" />
-        )}
-      </span>
-    )}
-  </button>
-))}
-
+                {currentLesson.options?.map((option, index) => (
+                  <button
+                    key={index}
+                    className={`w-full p-4 rounded-lg border text-left transition-colors ${
+                      selectedOption === option
+                        ? isSubmitted
+                          ? isCorrect
+                            ? 'bg-green-50 dark:bg-green-900/20 border-green-300 dark:border-green-800'
+                            : 'bg-red-50 dark:bg-red-900/20 border-red-300 dark:border-red-800'
+                          : 'bg-blue-50 dark:bg-blue-900/20 border-blue-300 dark:border-blue-800'
+                        : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700'
+                    }`}
+                    onClick={() => handleOptionSelect(option)}
+                    disabled={isSubmitted}
+                  >
+                    {option}
+                    {isSubmitted && selectedOption === option && (
+                      <span className="float-right">
+                        {isCorrect ? (
+                          <CheckCircle className="h-5 w-5 text-green-500" />
+                        ) : (
+                          <X className="h-5 w-5 text-red-500" />
+                        )}
+                      </span>
+                    )}
+                  </button>
+                ))}
               </div>
             </>
           )}
@@ -345,25 +344,24 @@ export default function LessonPage() {
               </div>
               
               <div className="grid grid-cols-2 gap-3">
-              {currentLesson.options?.map((option, index) => (
-  <button
-    key={index}
-    className={`p-4 rounded-lg border text-center transition-colors ${
-      selectedOption === option
-        ? isSubmitted
-          ? isCorrect
-            ? 'bg-green-50 dark:bg-green-900/20 border-green-300 dark:border-green-800'
-            : 'bg-red-50 dark:bg-red-900/20 border-red-300 dark:border-red-800'
-          : 'bg-blue-50 dark:bg-blue-900/20 border-blue-300 dark:border-blue-800'
-        : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700'
-    }`}
-    onClick={() => handleOptionSelect(option)}
-    disabled={isSubmitted}
-  >
-    <span className="block font-medium">{option}</span>
-  </button>
-))}
-
+                {currentLesson.options?.map((option, index) => (
+                  <button
+                    key={index}
+                    className={`p-4 rounded-lg border text-center transition-colors ${
+                      selectedOption === option
+                        ? isSubmitted
+                          ? isCorrect
+                            ? 'bg-green-50 dark:bg-green-900/20 border-green-300 dark:border-green-800'
+                            : 'bg-red-50 dark:bg-red-900/20 border-red-300 dark:border-red-800'
+                          : 'bg-blue-50 dark:bg-blue-900/20 border-blue-300 dark:border-blue-800'
+                        : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700'
+                    }`}
+                    onClick={() => handleOptionSelect(option)}
+                    disabled={isSubmitted}
+                  >
+                    <span className="block font-medium">{option}</span>
+                  </button>
+                ))}
               </div>
             </>
           )}
